@@ -109,9 +109,11 @@
         update();
       }
       function clears() {
-        console.log("cleared list");
-        localStorage.clear();
-        update();
+        if (confirm("do you really want to clear")) {
+          console.log("cleared list");
+          localStorage.clear();
+          update();
+        }
       }
     </script>
   </body>
